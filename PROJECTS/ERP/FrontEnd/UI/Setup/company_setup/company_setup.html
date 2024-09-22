@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Setup</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="../setup.html">Setup Home</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Company Setup</h1>
+    <form id="companyForm">
+      <div class="form-group">
+        <label for="companyCode">Company Code</label>
+        <input type="text" id="companyCode" required>
+      </div>
+      <div class="form-group">
+        <label for="companyName">Company Name</label>
+        <input type="text" id="companyName" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" required>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+          <!-- Add more countries as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="baseCurrency">Base Currency</label>
+        <select id="baseCurrency" required>
+          <option value="" disabled selected>Select currency</option>
+          <option value="USD">USD</option>
+          <option value="CAD">CAD</option>
+          <option value="GBP">GBP</option>
+          <!-- Add more currencies as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="financialYearStart">Financial Year Start</label>
+        <input type="date" id="financialYearStart" required>
+      </div>
+      <div class="form-group">
+        <label for="financialYearEnd">Financial Year End</label>
+        <input type="date" id="financialYearEnd" required>
+      </div>
+      <div class="form-group">
+        <label for="parentCompany">Parent Company</label>
+        <select id="parentCompany">
+          <option value="" disabled selected>Select parent company</option>
+          <option value="Parent1">Parent Company 1</option>
+          <option value="Parent2">Parent Company 2</option>
+          <!-- Add more parent companies as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="isSubsidiary">Is Subsidiary Of</label>
+        <input type="text" id="isSubsidiary">
+      </div>
+      <div class="form-group">
+        <label for="webURL">Web URL</label>
+        <input type="url" id="webURL">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
+      <div class="form-group">
+        <label for="remarks">Remarks</label>
+        <textarea id="remarks"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="accountNumbers">Account Numbers</label>
+        <input type="text" id="accountNumbers" placeholder="Add account number">
+        <button type="button" onclick="addAccountNumber()">Add</button>
+        <ul id="accountNumbersList"></ul>
+      </div>
+      <div class="form-group">
+        <label for="registerNumber">Register Number</label>
+        <input type="text" id="registerNumber">
+      </div>
+      <div class="form-group">
+        <label for="vatNumber">VAT Number</label>
+        <input type="text" id="vatNumber">
+      </div>
+      <div class="form-group">
+        <label for="svatNumber">SVAT Number</label>
+        <input type="text" id="svatNumber">
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="isActive"> Is Active Company
+        </label>
+      </div>
+      <button type="submit">Save Company Details</button>
+    </form>
+
+    <h2>Existing Companies</h2>
+    <ul id="companiesList">
+      <li>
+        Company A 
+        <a href="#" onclick="viewCompany('Company A')">View</a> | 
+        <a href="#" onclick="editCompany('Company A')">Edit</a> | 
+        <a href="#" onclick="deleteCompany('Company A')">Delete</a>
+      </li>
+      <li>
+        Company B 
+        <a href="#" onclick="viewCompany('Company B')">View</a> | 
+        <a href="#" onclick="editCompany('Company B')">Edit</a> | 
+        <a href="#" onclick="deleteCompany('Company B')">Delete</a>
+      </li>
+      <li>
+        Company C 
+        <a href="#" onclick="viewCompany('Company C')">View</a> | 
+        <a href="#" onclick="editCompany('Company C')">Edit</a> | 
+        <a href="#" onclick="deleteCompany('Company C')">Delete</a>
+      </li>
+      <!-- Add more companies as needed -->
+    </ul>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.hero {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+}
+
+.features {
+    padding: 30px 0;
+}
+
+.feature-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature-box h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}

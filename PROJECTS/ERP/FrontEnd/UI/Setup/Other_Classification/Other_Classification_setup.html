@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class Master</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="../setup.html">Setup Home</a>
+    </nav>
+    <h1>Other Classification Master</h1>
+    <form id="classForm">
+      <div class="form-group">
+        <label for="OtherClassification">Other Classification Code</label>
+        <input type="text" id="OtherClassificationCode" required>
+      </div>
+      <div class="form-group">
+        <label for="OtherClassificationName">Other Classification Name</label>
+        <input type="text" id="OtherClassificationName" required>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="isActive"> Is Active
+        </label>
+      </div>
+      <button type="submit">Save Classification Details</button>
+    </form>
+
+    <h2>Existing Classification</h2>
+    <ul id="ClassificationList">
+      <!-- Example list -->
+      <li>
+        <span>Classification Code: C001 - Classification Name: Advanced Physics</span>
+        <button onclick="viewClass('C001')">View</button>
+        <button onclick="editClass('C001')">Edit</button>
+        <button onclick="deleteClass('C001')">Delete</button>
+      </li>
+      <li>
+        <span>Classification Code: C002 - Classification Name: Basic Mathematics</span>
+        <button onclick="viewClass('C002')">View</button>
+        <button onclick="editClass('C002')">Edit</button>
+        <button onclick="deleteClass('C002')">Delete</button>
+      </li>
+      <li>
+        <span>Classification Code: C003 - Classification Name: Chemistry 101</span>
+        <button onclick="viewClass('C003')">View</button>
+        <button onclick="editClass('C003')">Edit</button>
+        <button onclick="deleteClass('C003')">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

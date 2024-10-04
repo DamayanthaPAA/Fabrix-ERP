@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Department Master File</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <nav>
+      <a href="../setup.html">Setup Home</a>
+    </nav>
+
+    <h1>Department Master Setup</h1>
+    <form id="departmentForm">
+      <div class="form-group">
+        <label for="departmentCode">Department Code</label>
+        <input type="text" id="departmentCode" required>
+      </div>
+      <div class="form-group">
+        <label for="departmentName">Department Name</label>
+        <input type="text" id="departmentName" required>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="isActive"> Is Active
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Department Type</label>
+        <label>
+          <input type="radio" name="deptType" value="Internal" required> Internal
+        </label>
+        <label>
+          <input type="radio" name="deptType" value="External" required> External
+        </label>
+      </div>
+
+      <button type="submit">Save Department</button>
+    </form>
+
+    <h2>Existing Departments</h2>
+    <ul id="departmentsList">
+      <!-- Sample list of existing departments -->
+      <li>
+        <span>HR001 - Human Resources</span>
+        <button onclick="viewDepartment('HR001')">View</button>
+        <button onclick="editDepartment('HR001')">Edit</button>
+        <button onclick="deleteDepartment('HR001')">Delete</button>
+      </li>
+      <li>
+        <span>FIN002 - Finance</span>
+        <button onclick="viewDepartment('FIN002')">View</button>
+        <button onclick="editDepartment('FIN002')">Edit</button>
+        <button onclick="deleteDepartment('FIN002')">Delete</button>
+      </li>
+      <li>
+        <span>IT003 - Information Technology</span>
+        <button onclick="viewDepartment('IT003')">View</button>
+        <button onclick="editDepartment('IT003')">Edit</button>
+        <button onclick="deleteDepartment('IT003')">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

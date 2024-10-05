@@ -1,0 +1,35 @@
+body {
+    background-color: #f0f5f5;
+  }
+  
+  h2 {
+    color: #4a4a4a;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .assignment-section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  #activeRoles, #assignedRoles {
+    height: 200px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  #employeeSearch {
+    margin-bottom: 10px;
+  }
+  

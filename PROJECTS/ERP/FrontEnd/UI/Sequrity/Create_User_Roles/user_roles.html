@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ERP System - Create User Roles</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">ERP System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="../SecuritySetup.html">Back to Security Setup Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Section -->
+  <div class="container mt-5">
+    <h1>Create User Roles</h1>
+    <p class="text-muted">Define roles for different users in the ERP system and assign privileges.</p>
+    
+    <form id="userRoleForm">
+      <div class="form-group">
+        <label for="roleCode">Role Code</label>
+        <input type="text" class="form-control" id="roleCode" placeholder="Enter Role Code" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="roleName">Role Name</label>
+        <input type="text" class="form-control" id="roleName" placeholder="Enter Role Name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="roleDescription">Description</label>
+        <textarea class="form-control" id="roleDescription" rows="3" placeholder="Enter Role Description"></textarea>
+      </div>
+      
+      <!-- Role Privileges (Dynamic Checkboxes for Multiple Privileges) -->
+      <div class="form-group">
+        <label for="rolePrivileges">Assign Privileges</label>
+        <div id="rolePrivileges">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="privilege1">
+            <label class="custom-control-label" for="privilege1">Access Dashboard</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="privilege2">
+            <label class="custom-control-label" for="privilege2">Manage Users</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="privilege3">
+            <label class="custom-control-label" for="privilege3">Generate Reports</label>
+          </div>
+          <!-- Add more privileges as needed -->
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Save Role</button>
+    </form>
+    
+    <hr>
+    
+    <h2>Existing Roles</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Role Code</th>
+          <th>Role Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="rolesList">
+        <!-- Sample roles -->
+        <tr>
+          <td>ADM</td>
+          <td>Administrator</td>
+          <td>Full system access.</td>
+          <td>
+            <button class="btn btn-sm btn-info">View</button>
+            <button class="btn btn-sm btn-warning">Edit</button>
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+        <tr>
+          <td>MGR</td>
+          <td>Manager</td>
+          <td>Access to managerial features.</td>
+          <td>
+            <button class="btn btn-sm btn-info">View</button>
+            <button class="btn btn-sm btn-warning">Edit</button>
+            <button class="btn btn-sm btn-danger">Delete</button>
+          </td>
+        </tr>
+        <!-- Add more roles as needed -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/scripts.js"></script>
+
+</body>
+</html>

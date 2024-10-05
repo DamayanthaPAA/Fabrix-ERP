@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assign Role Privileges</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/role_privileges.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">ERP System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="../SecuritySetup.html">Back to Security Setup Home</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <h1>Assign Role Privileges</h1>
+
+    <!-- Role Selection Dropdown -->
+    <div class="form-group">
+      <label for="roleSelect">Select Role</label>
+      <select class="form-control" id="roleSelect">
+        <option value="admin">Admin</option>
+        <option value="user">User</option>
+        <!-- Add more roles dynamically -->
+      </select>
+    </div>
+
+    <!-- Search for Modules -->
+    <div class="form-group">
+      <label for="searchModule">Search Modules</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="searchModule" placeholder="Search for a module...">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privileges Table -->
+    <h2>Privileges</h2>
+    <form id="privilegesForm">
+      <table class="table table-bordered" id="privilegesTable">
+        <thead>
+          <tr>
+            <th>Form Name</th>
+            <th>Add</th>
+            <th>Edit</th>
+            <th>View</th>
+            <th>Delete</th>
+            <th>Print</th>
+          </tr>
+        </thead>
+        <tbody id="moduleList">
+          <!-- Example module row (can be populated dynamically) -->
+          <tr>
+            <td>User Management</td>
+            <td><input type="checkbox" class="privilege-checkbox add-privilege"></td>
+            <td><input type="checkbox" class="privilege-checkbox edit-privilege"></td>
+            <td><input type="checkbox" class="privilege-checkbox view-privilege"></td>
+            <td><input type="checkbox" class="privilege-checkbox delete-privilege"></td>
+            <td><input type="checkbox" class="privilege-checkbox print-privilege"></td>
+          </tr>
+          <!-- More modules/forms can be dynamically added here -->
+        </tbody>
+      </table>
+
+      <!-- Select All / Remove All Buttons -->
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" id="selectAllPrivileges">Select All</button>
+        <button type="button" class="btn btn-secondary" id="removeAllPrivileges">Remove All</button>
+      </div>
+
+      <button type="submit" class="btn btn-success">Save Privileges</button>
+    </form>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/role_privileges.js"></script>
+</body>
+</html>

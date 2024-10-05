@@ -1,0 +1,23 @@
+name: Deploy to FTP server
+
+on:
+  push:
+    branches:
+      - master  # Triggers the action only when you push to the master branch
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to FTP server
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: ${{ ftp://fabrixerp.somee.com/www.FabrixERP.somee.com }}       # Set your FTP server address
+        username: ${{ FabrixERP }}   # FTP username stored in GitHub secrets
+        password: ${{ _Arunadapa@19811218 }}   # FTP password stored in GitHub secrets
+        local-dir: ./                           # The directory to upload (current dir)
+        server-dir: ftp://155.254.244.34/www.FabrixERP.somee.com  # The destination folder on the server

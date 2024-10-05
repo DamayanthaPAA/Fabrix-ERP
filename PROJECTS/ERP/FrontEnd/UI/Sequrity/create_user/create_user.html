@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">ERP System - User Setup</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="../SecuritySetup.html">Back to Setup Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mt-5">
+        <h2>Create User</h2>
+        <form id="userForm">
+            <!-- User Details Section -->
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="loginId">Login ID</label>
+                    <input type="text" id="loginId" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="userName">User Name</label>
+                    <input type="text" id="userName" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="isActive">Active</label>
+                    <input type="checkbox" id="isActive" class="form-check-input" checked>
+                </div>
+            </div>
+
+            <!-- Company Assignment Section -->
+            <h4>Company Assignment</h4>
+            <div class="row">
+                <div class="col-md-5 form-group">
+                    <label for="activeCompanies">Active Companies</label>
+                    <select id="activeCompanies" class="form-control" multiple>
+                        <!-- Add company options here -->
+                        <option>Company 1</option>
+                        <option>Company 2</option>
+                    </select>
+                </div>
+                <div class="col-md-2 text-center align-self-center">
+                    <button type="button" class="btn btn-primary mb-2" onclick="assignCompany()">>></button>
+                    <button type="button" class="btn btn-primary mb-2" onclick="removeAssignedCompany()"><<</button>
+                </div>
+                <div class="col-md-5 form-group">
+                    <label for="assignedCompanies">Assigned Companies</label>
+                    <select id="assignedCompanies" class="form-control" multiple>
+                        <!-- Assigned companies go here -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Extended Authorization Section -->
+            <h4>Extended Authorization</h4>
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label for="departmentCode">Department Code</label>
+                    <input type="text" id="departmentCode" class="form-control">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" class="form-control">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label for="allowedDiscount">Allowed to Discount</label>
+                    <input type="checkbox" id="allowedDiscount" class="form-check-input">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="maxDiscount">Max Allowed Discount (%)</label>
+                    <input type="number" id="maxDiscount" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="allowedOpenPrice">Allowed to Open Price</label>
+                    <input type="checkbox" id="allowedOpenPrice" class="form-check-input">
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <button type="button" class="btn btn-success" onclick="addExtendedAuthorization()">Add Extended Authorization</button>
+            <button type="button" class="btn btn-danger" onclick="removeExtendedAuthorization()">Remove Extended Authorization</button>
+
+            <!-- Extended Authorization Table -->
+            <h4>Extended Authorization List</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Department Code</th>
+                        <th>Department Name</th>
+                        <th>Allowed Discount</th>
+                        <th>Max Discount (%)</th>
+                        <th>Open Price Permission</th>
+                    </tr>
+                </thead>
+                <tbody id="authorizationList">
+                    <!-- Authorization records will be listed here -->
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+h2, h4 {
+    color: #007bff;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+button {
+    margin-right: 10px;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.btn-success, .btn-danger {
+    margin-top: 20px;
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+#activeCompanies, #assignedCompanies {
+    height: 150px;
+}

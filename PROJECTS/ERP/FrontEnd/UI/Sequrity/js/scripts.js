@@ -1,6 +1,6 @@
 // Function to navigate between pages
 function navigateTo(section) {
-    alert(`Navigating to ${section} page...`);
+    //alert(`Navigating to ${section} page...`);
     // Here you can set the actual navigation using window.location.href
     // Example: window.location.href = section + '.html';
   }
@@ -17,7 +17,7 @@ function navigateTo(section) {
       return;
     }
     users.push({ username, email, role });
-    alert(`User ${username} created successfully!`);
+    //alert(`User ${username} created successfully!`);
     displayUsers();
   }
   
@@ -41,7 +41,7 @@ function navigateTo(section) {
       let newEmail = prompt(`Update email for ${username}`, user.email);
       if (newEmail) {
         user.email = newEmail;
-        alert(`User ${username}'s email updated successfully!`);
+       // alert(`User ${username}'s email updated successfully!`);
         displayUsers();
       }
     }
@@ -50,7 +50,7 @@ function navigateTo(section) {
   // Function to delete a user
   function deleteUser(username) {
     users = users.filter(user => user.username !== username);
-    alert(`User ${username} deleted!`);
+    //alert(`User ${username} deleted!`);
     displayUsers();
   }
   
